@@ -1,0 +1,6 @@
+/Users/Josh/Projects/Monsters/Monsters/bin/Debug/Monsters.exe
+/Users/Josh/Projects/Monsters/Monsters/bin/Debug/Monsters.pdb
+/Users/Josh/Projects/Monsters/Monsters/obj/x86/Debug/Monsters.csprojResolveAssemblyReference.cache
+/Users/Josh/Projects/Monsters/Monsters/obj/x86/Debug/Monsters.csproj.CoreCompileInputs.cache
+/Users/Josh/Projects/Monsters/Monsters/obj/x86/Debug/Monsters.exe
+/Users/Josh/Projects/Monsters/Monsters/obj/x86/Debug/Monsters.pdb

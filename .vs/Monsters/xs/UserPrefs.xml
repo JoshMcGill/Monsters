@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{528A11BF-596E-4126-BC69-C851B62DDCB4}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Monsters/Program.cs">
+    <Files>
+      <File FileName="Monsters/Program.cs" Line="8" Column="22" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Monsters PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
