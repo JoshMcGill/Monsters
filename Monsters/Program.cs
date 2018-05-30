@@ -3,150 +3,6 @@ using System.Collections.Generic;
 
 namespace Monsters
 {
-    // Mediator for monsters
-    abstract class AbstractBattleRoom
-    {
-        public abstract void Register(Monster monster);
-        public abstract void Attack(string from, string to, float damage);
-    }
-
-    class BattleRoom : AbstractBattleRoom
-    {
-        private Dictionary<string, Monster> _monsters = 
-            new Dictionary<string, Monster>();
-
-        public override void Register(Monster monster)
-        {
-            if (!_monsters.ContainsValue(monster))
-            {
-                _monsters[monster.name] = monster;
-            }
-
-            monster.BattleRoom = this;
-        }
-
-        public override void Attack(string from, string to, float damage)
-        {
-            Monster monster = _monsters[to];
-
-            if (monster != null)
-            {
-                monster.Receive(from, damage);
-            }
-        }
-    }
-
-    // Monster class
-    class Monster
-    {
-        // Class vars
-        public string name;
-        public string type;
-        public float health = 150;
-        public List<Ability> abilities = new List<Ability>();
-        private BattleRoom _battleroom;
-
-
-        // Class constructors
-        public Monster () 
-        {
-            name = "Ditto";
-            type = "normal";
-            AddAbilities("Quick Attack", 30, 25, 1.5f);
-            AddAbilities("Punch", 20, 50, 2f);
-        }
-
-        public Monster (string _name)
-        {
-            name = _name;
-            type = "normal";
-            AddAbilities("Quick Attack", 25, 25, 1.5f);
-            AddAbilities("Punch", 20, 50, 2f);
-        }
-
-
-        // Class Methods
-        public BattleRoom BattleRoom
-        {
-            set { _battleroom = value; }
-            get { return _battleroom; }
-        }
-
-        // Sends attack to given monster
-        public void Send(string to, float damage)
-        {
-            _battleroom.Attack(name, to, damage);
-        }
-
-        // Receives attack from enemy
-        public virtual void Receive(string from, float damage)
-        {
-            Console.WriteLine("{0} dealt {2} damage to {1}!",
-              from, name, damage);
-
-            if ((health - damage) <=  0) 
-            {
-                health = 0;
-                Console.WriteLine("");
-                Console.WriteLine("{0} has fainted!", name);
-                Console.WriteLine("");
-                Console.WriteLine("GAME OVER!");
-            }
-            else 
-            {
-                health -= damage;
-            }
-        }
-
-        private void AddAbilities(string _name, int _damage, int _critChance, float _critMultiplier)
-        {
-            Ability ability = new Ability(_name, _damage, "normal", _critChance, _critMultiplier);
-            abilities.Add(ability);
-        }
-    }
-
-    // Ability class
-    class Ability {
-        // Class Vars
-        public string name;
-        public int damage;
-        public string type;
-        public int critChance = 25;
-        public float critMultiplier = 1.50f;
-
-        // Class Constructors
-        public Ability(string _name, int _damage)
-        {
-            name = _name;
-            damage = _damage;
-            type = "normal";
-        }
-
-        public Ability(string _name, int _damage, string _type)
-        {
-            name = _name;
-            damage = _damage;
-            type = _type;
-        }
-
-        public Ability(string _name, int _damage, string _type, int _critChance)
-        {
-            name = _name;
-            damage = _damage;
-            type = _type;
-            critChance = _critChance;
-        }
-
-        public Ability(string _name, int _damage, string _type, int _critChance, float _critMultiplier)
-        {
-            name = _name;
-            damage = _damage;
-            type = _type;
-            critChance = _critChance;
-            critMultiplier = _critMultiplier;
-        }
-    }
-
     // Game Logic
     class MainClass
     {
@@ -157,7 +13,7 @@ namespace Monsters
 
             // Create monsters
             Monster enemy = new Monster("Ratata");
-            Monster player = CreatePokemon();
+            Monster player = CreateMonster();
 
             // Register monsters to chat room
             battleRoom.Register(enemy);
@@ -181,6 +37,7 @@ namespace Monsters
             // Start Battle
             Random roll = new Random();
             int starterRoll = roll.Next(0, 2);
+            Console.WriteLine("TEST ROLL = " + starterRoll);
             Monster attacker;
             Monster reciever;
 
@@ -221,6 +78,7 @@ namespace Monsters
 
         }
 
+        // GENERAL METHODS
         public static void Attack(Monster attacker, Monster reciever)
         {
             Console.WriteLine("What ability would you like to use?");
@@ -277,7 +135,7 @@ namespace Monsters
             return ability.damage;
         }
 
-        public static Monster CreatePokemon()
+        public static Monster CreateMonster()
         {
             Console.WriteLine("Choose a name for your Monster!");
             string input = Console.ReadLine();
