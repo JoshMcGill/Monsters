@@ -37,6 +37,7 @@
     <Compile Include="Monster.cs" />
     <Compile Include="Ability.cs" />
     <Compile Include="BattleRoom.cs" />
+    <Compile Include="IBattleRoom.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,7 +10,6 @@ namespace Monsters
         public string type;
         public float health = 150;
         public List<Ability> abilities = new List<Ability>();
-        private BattleRoom _battleroom;
 
         public Monster(string _name)
         {
@@ -21,20 +20,8 @@ namespace Monsters
         }
 
         // Class Methods
-        public BattleRoom BattleRoom
-        {
-            set { _battleroom = value; }
-            get { return _battleroom; }
-        }
-
-        // Sends attack to given monster
-        public void Send(string to, float damage)
-        {
-            _battleroom.Attack(name, to, damage);
-        }
-
         // Receives attack from enemy
-        public virtual void Receive(string from, float damage)
+        public void Receive(string from, float damage)
         {
             Console.WriteLine("{0} dealt {2} damage to {1}!",
               from, name, damage);

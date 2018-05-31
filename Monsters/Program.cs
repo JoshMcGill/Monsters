@@ -11,11 +11,15 @@ namespace Monsters
             // Create the battle room
             BattleRoom battleRoom = new BattleRoom();
 
-            // Create monsters
+            // Create enemy
             Monster enemy = new Monster("Ratata");
-            Monster player = CreateMonster();
 
-            // Register monsters to chat room
+            // Create players monster
+            Console.WriteLine("Choose a name for your Monster!");
+            string input = Console.ReadLine();
+            Monster player = new Monster(input);
+
+            // Register monsters to battleRoom
             battleRoom.Register(enemy);
             battleRoom.Register(player);
 
@@ -37,7 +41,6 @@ namespace Monsters
             // Start Battle
             Random roll = new Random();
             int starterRoll = roll.Next(0, 2);
-            Console.WriteLine("TEST ROLL = " + starterRoll);
             Monster attacker;
             Monster reciever;
 
@@ -59,14 +62,41 @@ namespace Monsters
 
                 if (attacker == player)
                 {
-                    Attack(attacker, reciever);
+                    // Pick Ability
+                    Console.WriteLine("What ability would you like to use?");
+                    PrintAbilities(attacker);
+                    string userInput = Console.ReadLine();
 
+                    Ability chosenAbility = PickAbility(attacker, userInput);
+
+                    while (chosenAbility == null)
+                    {
+                        Console.WriteLine("The ability you chose is not valid, please try again.");
+                        userInput = Console.ReadLine();
+
+                        chosenAbility = PickAbility(attacker, userInput);
+                    }
+
+                    // Attack
+                    battleRoom.Attack(attacker, reciever, chosenAbility);
+
+                    // Change turn
                     attacker = enemy;
                     reciever = player;
+
+                    // Allow player to acknowledge what happened
+                    Console.WriteLine("");
+                    Console.WriteLine("Press anything to continue");
+                    Console.ReadLine();
                 }
                 else {
-                    EnemyAttack(attacker, reciever);
+                    // Randomly pick ability
+                    int abilityRoll = roll.Next(0, attacker.abilities.Count);
 
+                    // Attack
+                    battleRoom.Attack(attacker, reciever, attacker.abilities[abilityRoll]);
+
+                    // Change Turn
                     attacker = player;
                     reciever = enemy;
                 }
@@ -79,69 +109,32 @@ namespace Monsters
         }
 
         // GENERAL METHODS
-        public static void Attack(Monster attacker, Monster reciever)
+        // Allows player to choose the ability to attack with
+        public static Ability PickAbility(Monster attacker, string move)
         {
-            Console.WriteLine("What ability would you like to use?");
-
             foreach (var ability in attacker.abilities)
+            {
+                if (ability.name == move)
+                {
+                    return ability;
+                }
+            }
+
+            return null;
+        }
+
+        // Print a list of all abilities from a monster to the console
+        public static void PrintAbilities(Monster monster)
+        {
+            foreach (var ability in monster.abilities)
             {
                 Console.WriteLine(ability.name);
             }
 
             Console.WriteLine("");
-
-            bool abilityChosen = false;
-
-            while (!abilityChosen)
-            {
-                Console.WriteLine("Type the name of the ability you would like to use:");
-                string userInput = Console.ReadLine();
-
-                foreach (var ability in attacker.abilities)
-                {
-                    if (ability.name == userInput)
-                    {
-                        abilityChosen = true;
-                        attacker.Send(reciever.name, CalculateDamage(attacker, ability));
-                    }
-                }
-            }
-
-            Console.WriteLine("");
-            Console.WriteLine("Press anything to continue");
-            Console.ReadLine();
         }
 
-        public static void EnemyAttack(Monster attacker, Monster reciever)
-        {
-            Random roll = new Random();
-            int abilityRoll = roll.Next(0, attacker.abilities.Count);
-
-            attacker.Send(reciever.name, CalculateDamage(attacker, attacker.abilities[abilityRoll]));
-        }
-
-        public static float CalculateDamage(Monster attacker, Ability ability)
-        {
-            Random randomNumber = new Random();
-            int criticalAttack = randomNumber.Next(1, 101);
-
-            if (ability.critChance <= criticalAttack)
-            {
-                Console.WriteLine(attacker.name + " used " + ability.name + ", it was a critical hit!");
-                return ability.damage * ability.critMultiplier;
-            }
-
-            Console.WriteLine(attacker.name + " used " + ability.name);
-            return ability.damage;
-        }
-
-        public static Monster CreateMonster()
-        {
-            Console.WriteLine("Choose a name for your Monster!");
-            string input = Console.ReadLine();
-            return new Monster(input);
-        }
-
+        // Write the status of the match to the console
         public static void WriteStatus(Monster player, Monster enemy, Monster attacker)
         {
             Console.WriteLine(player.name + " health: " + player.health);
