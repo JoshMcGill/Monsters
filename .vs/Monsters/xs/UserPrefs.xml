@@ -1,11 +1,13 @@
 ﻿<Properties StartupConfiguration="{528A11BF-596E-4126-BC69-C851B62DDCB4}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Monsters/BattleRoom.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Monsters/IBattleRoom.cs">
     <Files>
-      <File FileName="Monsters/Program.cs" Line="118" Column="18" />
-      <File FileName="Monsters/Ability.cs" Line="3" Column="2" />
-      <File FileName="Monsters/Monster.cs" Line="14" Column="37" />
-      <File FileName="Monsters/BattleRoom.cs" Line="5" Column="2" NotebookId="1" />
-      <File FileName="Monsters/IBattleRoom.cs" Line="9" Column="6" NotebookId="1" />
+      <File FileName="Monsters/Program.cs" Line="24" Column="39" />
+      <File FileName="Monsters/Ability.cs" Line="4" Column="5" />
+      <File FileName="Monsters/Monster.cs" Line="46" Column="36" />
+      <File FileName="Monsters/BattleRoom.cs" Line="65" Column="1" NotebookId="1" />
+      <File FileName="Monsters/IBattleRoom.cs" Line="8" Column="46" NotebookId="1" />
+      <File FileName="Monsters/AttackMessenger.cs" Line="4" Column="33" NotebookId="1" />
+      <File FileName="Monsters/Attack.cs" Line="8" Column="41" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

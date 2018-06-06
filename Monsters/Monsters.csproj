@@ -38,6 +38,8 @@
     <Compile Include="Ability.cs" />
     <Compile Include="BattleRoom.cs" />
     <Compile Include="IBattleRoom.cs" />
+    <Compile Include="AttackMessenger.cs" />
+    <Compile Include="AttackEventArgs.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

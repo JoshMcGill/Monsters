@@ -23,16 +23,9 @@ namespace Monsters
         // Receives attack from enemy
         public void Receive(string from, float damage)
         {
-            Console.WriteLine("{0} dealt {2} damage to {1}!",
-              from, name, damage);
-
             if ((health - damage) <= 0)
             {
                 health = 0;
-                Console.WriteLine("");
-                Console.WriteLine("{0} has fainted!", name);
-                Console.WriteLine("");
-                Console.WriteLine("GAME OVER!");
             }
             else
             {

@@ -11,6 +11,10 @@ namespace Monsters
             // Create the battle room
             BattleRoom battleRoom = new BattleRoom();
 
+            // Create Messenger and subscribe to the attack
+            AttackMessenger attackMessenger = new AttackMessenger();
+            battleRoom.AttackCompleted += attackMessenger.OnAttackCompleted;
+
             // Create enemy
             Monster enemy = new Monster("Ratata");
 
@@ -43,6 +47,8 @@ namespace Monsters
             int starterRoll = roll.Next(0, 2);
             Monster attacker;
             Monster reciever;
+            string deadMonsterName;
+
 
             // Randomly Decide who attacks first
             if (starterRoll == 0)
@@ -105,6 +111,18 @@ namespace Monsters
                 Console.WriteLine("--------END TURN--------");
                 Console.WriteLine("");
             }
+
+            if (attacker.health == 0) {
+                deadMonsterName = attacker.name;
+            }
+            else {
+                deadMonsterName = reciever.name;
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine("{0} has fainted!", deadMonsterName);
+            Console.WriteLine("");
+            Console.WriteLine("GAME OVER!");
 
         }
 
