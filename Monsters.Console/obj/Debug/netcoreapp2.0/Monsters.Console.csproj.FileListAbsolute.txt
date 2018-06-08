@@ -1,0 +1,4 @@
+/Users/Josh/Projects/Monsters/Monsters.Console/obj/Debug/netcoreapp2.0/Monsters.Console.csprojResolveAssemblyReference.cache
+/Users/Josh/Projects/Monsters/Monsters.Console/obj/Debug/netcoreapp2.0/Monsters.Console.csproj.CoreCompileInputs.cache
+/Users/Josh/Projects/Monsters/Monsters.Console/obj/Debug/netcoreapp2.0/Monsters.Console.AssemblyInfoInputs.cache
+/Users/Josh/Projects/Monsters/Monsters.Console/obj/Debug/netcoreapp2.0/Monsters.Console.AssemblyInfo.cs

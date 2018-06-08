@@ -1,0 +1,9 @@
+/Users/Josh/Projects/Monsters/Monster.Domain/bin/Debug/netcoreapp2.0/Monsters.Domain.deps.json
+/Users/Josh/Projects/Monsters/Monster.Domain/bin/Debug/netcoreapp2.0/Monsters.Domain.dll
+/Users/Josh/Projects/Monsters/Monster.Domain/bin/Debug/netcoreapp2.0/Monsters.Domain.pdb
+/Users/Josh/Projects/Monsters/Monster.Domain/obj/Debug/netcoreapp2.0/Monsters.Domain.csprojResolveAssemblyReference.cache
+/Users/Josh/Projects/Monsters/Monster.Domain/obj/Debug/netcoreapp2.0/Monsters.Domain.csproj.CoreCompileInputs.cache
+/Users/Josh/Projects/Monsters/Monster.Domain/obj/Debug/netcoreapp2.0/Monsters.Domain.AssemblyInfoInputs.cache
+/Users/Josh/Projects/Monsters/Monster.Domain/obj/Debug/netcoreapp2.0/Monsters.Domain.AssemblyInfo.cs
+/Users/Josh/Projects/Monsters/Monster.Domain/obj/Debug/netcoreapp2.0/Monsters.Domain.dll
+/Users/Josh/Projects/Monsters/Monster.Domain/obj/Debug/netcoreapp2.0/Monsters.Domain.pdb

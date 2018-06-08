@@ -1,7 +1,9 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monsters", "Monsters\Monsters.csproj", "{528A11BF-596E-4126-BC69-C851B62DDCB4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monsters.Domain", "Monster.Domain\Monsters.Domain.csproj", "{4D5CDE50-C19A-4782-B340-A90E372AF8C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monsters.ConsoleApp", "Monsters.Console\Monsters.ConsoleApp.csproj", "{B0F3FE45-CB52-4AB0-9B23-5815373497E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,9 +11,13 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{528A11BF-596E-4126-BC69-C851B62DDCB4}.Debug|x86.ActiveCfg = Debug|x86
-		{528A11BF-596E-4126-BC69-C851B62DDCB4}.Debug|x86.Build.0 = Debug|x86
-		{528A11BF-596E-4126-BC69-C851B62DDCB4}.Release|x86.ActiveCfg = Release|x86
-		{528A11BF-596E-4126-BC69-C851B62DDCB4}.Release|x86.Build.0 = Release|x86
+		{4D5CDE50-C19A-4782-B340-A90E372AF8C5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4D5CDE50-C19A-4782-B340-A90E372AF8C5}.Debug|x86.Build.0 = Debug|Any CPU
+		{4D5CDE50-C19A-4782-B340-A90E372AF8C5}.Release|x86.ActiveCfg = Release|Any CPU
+		{4D5CDE50-C19A-4782-B340-A90E372AF8C5}.Release|x86.Build.0 = Release|Any CPU
+		{B0F3FE45-CB52-4AB0-9B23-5815373497E4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B0F3FE45-CB52-4AB0-9B23-5815373497E4}.Debug|x86.Build.0 = Debug|Any CPU
+		{B0F3FE45-CB52-4AB0-9B23-5815373497E4}.Release|x86.ActiveCfg = Release|Any CPU
+		{B0F3FE45-CB52-4AB0-9B23-5815373497E4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "Monsters.ConsoleApp/1.0.0": {
+        "dependencies": {
+          "Monsters.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Monsters.ConsoleApp.dll": {}
+        }
+      },
+      "Monsters.Domain/1.0.0": {
+        "runtime": {
+          "Monsters.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Monsters.ConsoleApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Monsters.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

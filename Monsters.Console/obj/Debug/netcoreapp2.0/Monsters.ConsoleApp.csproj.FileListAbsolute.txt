@@ -1,0 +1,13 @@
+/Users/Josh/Projects/Monsters/Monsters.Console/obj/Debug/netcoreapp2.0/Monsters.ConsoleApp.csproj.CoreCompileInputs.cache
+/Users/Josh/Projects/Monsters/Monsters.Console/obj/Debug/netcoreapp2.0/Monsters.ConsoleApp.AssemblyInfoInputs.cache
+/Users/Josh/Projects/Monsters/Monsters.Console/obj/Debug/netcoreapp2.0/Monsters.ConsoleApp.AssemblyInfo.cs
+/Users/Josh/Projects/Monsters/Monsters.Console/bin/Debug/netcoreapp2.0/Monsters.ConsoleApp.deps.json
+/Users/Josh/Projects/Monsters/Monsters.Console/bin/Debug/netcoreapp2.0/Monsters.ConsoleApp.runtimeconfig.json
+/Users/Josh/Projects/Monsters/Monsters.Console/bin/Debug/netcoreapp2.0/Monsters.ConsoleApp.runtimeconfig.dev.json
+/Users/Josh/Projects/Monsters/Monsters.Console/bin/Debug/netcoreapp2.0/Monsters.ConsoleApp.dll
+/Users/Josh/Projects/Monsters/Monsters.Console/bin/Debug/netcoreapp2.0/Monsters.ConsoleApp.pdb
+/Users/Josh/Projects/Monsters/Monsters.Console/bin/Debug/netcoreapp2.0/Monsters.Domain.dll
+/Users/Josh/Projects/Monsters/Monsters.Console/bin/Debug/netcoreapp2.0/Monsters.Domain.pdb
+/Users/Josh/Projects/Monsters/Monsters.Console/obj/Debug/netcoreapp2.0/Monsters.ConsoleApp.dll
+/Users/Josh/Projects/Monsters/Monsters.Console/obj/Debug/netcoreapp2.0/Monsters.ConsoleApp.pdb
+/Users/Josh/Projects/Monsters/Monsters.Console/obj/Debug/netcoreapp2.0/Monsters.ConsoleApp.csprojResolveAssemblyReference.cache

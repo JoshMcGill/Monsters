@@ -1,20 +1,29 @@
-﻿<Properties StartupConfiguration="{528A11BF-596E-4126-BC69-C851B62DDCB4}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Monsters/IBattleRoom.cs">
+﻿<Properties StartupConfiguration="{B0F3FE45-CB52-4AB0-9B23-5815373497E4}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Monsters.Console/Program.cs">
     <Files>
-      <File FileName="Monsters/Program.cs" Line="24" Column="39" />
-      <File FileName="Monsters/Ability.cs" Line="4" Column="5" />
-      <File FileName="Monsters/Monster.cs" Line="46" Column="36" />
-      <File FileName="Monsters/BattleRoom.cs" Line="65" Column="1" NotebookId="1" />
-      <File FileName="Monsters/IBattleRoom.cs" Line="8" Column="46" NotebookId="1" />
-      <File FileName="Monsters/AttackMessenger.cs" Line="4" Column="33" NotebookId="1" />
-      <File FileName="Monsters/Attack.cs" Line="8" Column="41" NotebookId="1" />
+      <File FileName="Monsters.Console/Program.cs" Line="111" Column="1" />
+      <File FileName="Monster.Domain/IBattleRoom.cs" Line="4" Column="12" />
+      <File FileName="Monster.Domain/BattleRoom.cs" Line="6" Column="12" />
+      <File FileName="Monster.Domain/AttackEventArgs.cs" Line="10" Column="6" />
+      <File FileName="Monster.Domain/Ability.cs" Line="4" Column="12" />
+      <File FileName="Monster.Domain/Monster.cs" Line="6" Column="12" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Monsters" expanded="True">
+            <Node name="Monsters.ConsoleApp" expanded="True" />
+            <Node name="Monsters.Domain" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Monsters PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.Monsters.ConsoleApp PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
 </Properties>
